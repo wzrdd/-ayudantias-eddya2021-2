@@ -6,8 +6,8 @@ public class Collatz {
     static void collatz_rec(long n) {
         System.out.print(n + " ");
         if(n == 1) return;
-        else if((n & 1) == 1) collatz_rec(((n << 1)|1) + n);
-        else collatz_rec(n >> 1);
+        else if(n % 2 == 0) collatz_rec(n/2);
+        else collatz_rec(n*3 + 1);
     }
 
     // Solución iterativa
